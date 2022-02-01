@@ -52,7 +52,6 @@ for (item in itemList) {
 	resultList.add(item)
     }
 }
-...
 ```
 
 
