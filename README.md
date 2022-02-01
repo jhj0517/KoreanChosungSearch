@@ -42,7 +42,26 @@ For example, the following would return `true`.<br>
 KCS().match("ㅍ도ㅁ","포도맛")
 ```
 <br>
-You can use following few methods if you need.<br>
+
+You can use it like this in `Adapter`'s `Filter`. <br>
+`Adapter` 의 `Filter` 에서 다음과 같이 사용할 수 있습니다.
+
+
+```
+...
+for (item in itemList) {
+    if(KCS().match(query,item)){
+	resultList.add(item)
+    }
+}
+```
+
+<br>
+
+![example](https://user-images.githubusercontent.com/97279763/151987180-3b9ab6aa-4f51-4c73-be7e-4b1baaa1cac0.gif)
+
+<br>
+And you can use following few methods if you need.<br>
 필요하다면 다음 몇개의 메소드를 사용할 수 있습니다.<br>
 
 ###### 초성 분리 메소드
