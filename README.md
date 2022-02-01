@@ -24,8 +24,8 @@ dependencies {
 ```
 
 # Usage
-Method for Korean Chosung Search:<br>
-초성 검색 메소드
+###### Method for Korean Chosung Search:<br>
+###### 초성 검색 메소드
 
 ```
 KCS().match(query,tocompare)
@@ -41,18 +41,36 @@ For example, the following would return `true`.<br>
 ```
 KCS().match("ㅍ도ㅁ","포도맛")
 ```
+<br>
+You can use following few methods if you need.<br>
+필요하다면 다음 몇개의 메소드를 사용할 수 있습니다.<br>
 
-You can use it like this in  `Adapter`'s `SearchFilter`<br>
-`Adapter` 의 `SearchFilter` 에서 다음과 같이 사용할 수 있습니다. 
+###### 초성 분리 메소드
 
 ```
-...
-for (item in itemList) {
-    if(KCS().match(query,item)){
-	resultList.add(item)
-    }
-}
+KCS().getCho() // it returns 'ㅎ' if it takes '하'
 ```
+
+한 글자를 입력받아 초성을 분리해내 추출합니다.
+'하' 를 변수로 받으면, 'ㅎ' 를 반환합니다.
+
+###### 중성 분리 메소드
+
+```
+KCS().getJoong() // it returns 'ㅏ' if it takes '하'
+```
+
+한 글자를 입력받아 중성을 분리해내 추출합니다.
+'하' 를 변수로 받으면, 'ㅏ' 를 반환합니다.
+
+###### 종성 분리 메소드
+
+```
+KCS().getJong() // it returns 'ㄹ' if it takes '할'
+```
+
+한 글자를 입력받아 종성을 분리해내 추출합니다.
+'할' 을 변수로 받으면, 'ㄹ' 을 반환합니다.
 
 
 
