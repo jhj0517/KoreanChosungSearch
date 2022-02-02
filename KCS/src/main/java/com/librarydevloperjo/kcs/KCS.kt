@@ -1,10 +1,12 @@
 package com.librarydevloperjo.kcs
 
 class KCS {
+
     companion object{
-        private const val UNICODE_HangulStart = 44032
-        private const val UNICODE_HangulLast = 55203
-    }
+
+    private const val UNICODE_HangulStart = 44032
+    private const val UNICODE_HangulLast = 55203
+
 
     private val CHO = listOf("ㄱ","ㄲ","ㄴ","ㄷ","ㄸ","ㄹ","ㅁ","ㅂ","ㅃ", "ㅅ","ㅆ","ㅇ","ㅈ","ㅉ","ㅊ","ㅋ","ㅌ","ㅍ","ㅎ")
     private val JOONG = listOf("ㅏ","ㅐ","ㅑ","ㅒ","ㅓ","ㅔ","ㅕ","ㅖ","ㅗ","ㅘ", "ㅙ","ㅚ","ㅛ","ㅜ","ㅝ","ㅞ","ㅟ","ㅠ","ㅡ","ㅢ","ㅣ")
@@ -89,5 +91,7 @@ class KCS {
 
     fun isHangeul(word: Char): Boolean {
         return UNICODE_HangulStart <= word.code && word.code <= UNICODE_HangulLast
+    }
+
     }
 }
