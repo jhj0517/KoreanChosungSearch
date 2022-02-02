@@ -19,13 +19,12 @@ allprojects {
 
 ```
 dependencies {
-  implementation 'com.github.DeveloperJo:KoreanChosungSearch:1.0.0'
+  implementation 'com.github.DeveloperJo:KoreanChosungSearch:1.0.1'
 }
 ```
 
 # Usage
-###### Method for Korean Chosung Search:<br>
-###### 초성 검색 메소드
+###### Method for Korean Chosung Search:<br> 초성 검색 메소드
 
 ```
 KCS().match(query,tocompare)
