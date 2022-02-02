@@ -98,5 +98,5 @@ KCS.isHangeul() // it returns 'true' if it takes one Hangeul char.
 ```
 
 한 글자의 `Char` 타입의 변수를 입력받아 한글이면 `true`를 , 아니면 `false` 를 반환합니다. <br>
-'사`를 변수로 받으면 `true` , 한글 이외의 문자를 변수로 받으면 `false`를 반환합니다.
+'사'를 변수로 받으면 `true` , 한글 이외의 문자를 변수로 받으면 `false` 를 반환합니다.
 
