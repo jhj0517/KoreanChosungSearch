@@ -4,6 +4,7 @@ plugins {
 }
 
 android {
+    namespace = 'com.librarydevloperjo.kcs'
     compileSdkVersion 31
     buildToolsVersion "30.0.3"
 
