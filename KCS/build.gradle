@@ -1,9 +1,11 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    id 'maven-publish'
 }
 
 android {
+    namespace = "com.librarydevloperjo.kcs"
     compileSdkVersion 31
     buildToolsVersion "30.0.3"
 
@@ -41,4 +43,29 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}
+
+publishing {
+    publications {
+        release(MavenPublication) {
+
+            groupId = 'com.librarydevloperjo'
+            artifactId = 'kcs'
+            version = '1.0.0'
+
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/jhj0517/KoreanChosungSearch")
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_USERNAME")
+                password = project.findProperty("gpr.key") ?: System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
 }
