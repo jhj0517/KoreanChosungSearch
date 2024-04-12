@@ -1,3 +1,6 @@
+# Deprecated
+DEPRECATED! Please see [ChoserSearch](https://github.com/jhj0517/KoreanChoseongSearch). 
+
 # KoreanChosungSearch
 <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=Kotlin&logoColor=white"/></a> <br>
 Android library for KoreanChosungSearch.<br>
